@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Buku: Struktur Data & Algoritma Python - SIPUS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="public-layout">
+
+  <!-- Header Navigasi Publik -->
+  <header class="public-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-link">
+          <img src="assets/images/logo.svg" alt="Logo SIPUS" class="brand-logo">
+          <div class="brand-title">
+            <span class="brand-name">SIPUS</span>
+            <span class="brand-subtitle">Sistem Informasi Perpustakaan</span>
+          </div>
+        </a>
+
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Beranda</a>
+          <a href="katalog.html" class="nav-link active">Katalog Buku</a>
+          <a href="profil.html" class="nav-link">Profil Anggota</a>
+          <a href="dashboard.html" class="nav-link">Panel Admin</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-secondary btn-sm">Masuk Sistem</a>
+          <a href="profil.html" class="btn btn-primary btn-sm">Area Anggota</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <!-- Breadcrumb Navigasi -->
+      <div style="margin-bottom: 1.5rem;" class="text-sm text-muted">
+        <a href="index.html">Beranda</a> / 
+        <a href="katalog.html">Katalog Buku</a> / 
+        <span style="color: var(--main-text); font-weight: 500;">Struktur Data & Algoritma Python</span>
+      </div>
+
+      <!-- Detail Layout (FR-003) -->
+      <div class="detail-layout">
+        <!-- Kolom Kiri: Sampul & Aksi -->
+        <div class="detail-cover-col">
+          <div class="detail-cover-box">
+            <img src="assets/images/books/buku-1.svg" alt="Sampul Buku Struktur Data & Algoritma Python">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <!-- Tombol Peminjaman sebagai elemen visual -->
+            <button type="button" class="btn btn-primary" style="width: 100%; padding: 0.75rem 1rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              Ajukan Peminjaman Buku
+            </button>
+            <a href="katalog.html" class="btn btn-secondary" style="width: 100%;">
+              &larr; Kembali ke Katalog
+            </a>
+          </div>
+
+          <div class="notice-box notice-info" style="margin-top: 0.5rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span class="text-xs">Pengambilan fisik buku dilayani di Meja Sirkulasi Perpustakaan Pusat dengan menunjukkan Kartu Anggota.</span>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Metadata & Deskripsi -->
+        <div class="detail-content-col">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+            <span class="badge badge-info">Kode: CS-2023-001</span>
+            <span class="badge badge-success">Status: Tersedia untuk Dipinjam</span>
+          </div>
+
+          <h1 style="font-size: 2.1rem; margin-bottom: 0.35rem;">Struktur Data & Algoritma Python</h1>
+          <p class="text-muted" style="font-size: 1.05rem; margin-bottom: 1.5rem;">
+            Oleh <strong style="color: var(--primary-navy);">Dr. Eng. Rinaldi Munir</strong>
+          </p>
+
+          <div class="card" style="margin-bottom: 1.75rem;">
+            <div class="card-header">
+              <h3 class="card-title">Informasi & Metadata Bibliografi</h3>
+            </div>
+            <div class="card-body" style="padding-top: 0.5rem; padding-bottom: 0.5rem;">
+              <table class="detail-meta-table">
+                <tbody>
+                  <tr>
+                    <td>Kode Buku</td>
+                    <td>CS-2023-001</td>
+                  </tr>
+                  <tr>
+                    <td>Nomor ISBN</td>
+                    <td>978-623-01-0892-4</td>
+                  </tr>
+                  <tr>
+                    <td>Penulis</td>
+                    <td>Dr. Eng. Rinaldi Munir</td>
+                  </tr>
+                  <tr>
+                    <td>Penerbit</td>
+                    <td>Informatika Press Bandung</td>
+                  </tr>
+                  <tr>
+                    <td>Tahun Terbit</td>
+                    <td>2023 (Cetakan ke-3)</td>
+                  </tr>
+                  <tr>
+                    <td>Kategori / Bidang</td>
+                    <td>Ilmu Komputer / Pemrograman & Algoritma</td>
+                  </tr>
+                  <tr>
+                    <td>Jumlah Halaman</td>
+                    <td>xvi + 482 halaman</td>
+                  </tr>
+                  <tr>
+                    <td>Bahasa</td>
+                    <td>Bahasa Indonesia</td>
+                  </tr>
+                  <tr>
+                    <td>Stok Koleksi</td>
+                    <td><strong style="color: var(--success);">5 Eksemplar</strong> (Total: 6 Eksemplar, 1 Dipinjam)</td>
+                  </tr>
+                  <tr>
+                    <td>Lokasi Rak</td>
+                    <td>Rak CS-02, Baris 3, Perpustakaan Pusat Lt. 2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Deskripsi Buku (FR-003) -->
+          <div>
+            <h3 style="margin-bottom: 0.75rem;">Sinopsis & Deskripsi Koleksi</h3>
+            <p style="line-height: 1.7; color: var(--main-text); margin-bottom: 1rem;">
+              Buku ini dirancang sebagai buku pegangan utama mata kuliah Algoritma dan Struktur Data di jurusan Teknik Informatika dan Ilmu Komputer. Pembahasan dimulai dari dasar-dasar analisis kompleksitas algoritma (notasi Big-O), array, matriks, linked list (single, double, circular), stack, dan queue dengan implementasi bahasa pemrograman Python modern.
+            </p>
+            <p style="line-height: 1.7; color: var(--main-text); margin-bottom: 1rem;">
+              Pada bab lanjutan, pembaca diajak mendalami pohon biner (Binary Search Tree, AVL Tree, Red-Black Tree), heap, struktur data graf beserta penelusurannya (BFS dan DFS), algoritma lintasan terpendek (Dijkstra, Bellman-Ford), serta algoritma pengurutan (Sorting) dan pencarian (Searching) yang efisien.
+            </p>
+            <p style="line-height: 1.7; color: var(--main-text);">
+              Setiap bab dilengkapi dengan studi kasus nyata, latihan soal terstruktur, serta contoh implementasi kode Python yang telah teruji dan mematuhi konvensi PEP 8.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Publik -->
+  <footer class="public-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>SIPUS Teknik Informatika</h4>
+          <p class="text-sm" style="color: #94A3B8; line-height: 1.6;">
+            Sistem Informasi Perpustakaan berbasis web untuk mempermudah akses katalog koleksi buku ilmiah dan operasional sirkulasi peminjaman akademik.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi Halaman</h4>
+          <div class="footer-links">
+            <a href="index.html">Beranda</a>
+            <a href="katalog.html">Katalog Buku</a>
+            <a href="detail-buku.html">Detail Koleksi</a>
+            <a href="profil.html">Profil Anggota</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Portal Staf & Petugas</h4>
+          <div class="footer-links">
+            <a href="login.html">Masuk Sistem (Login)</a>
+            <a href="dashboard.html">Dashboard Admin</a>
+            <a href="buku.html">Kelola Data Buku</a>
+            <a href="laporan.html">Laporan Perpustakaan</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Bantuan & Kontak</h4>
+          <div class="footer-links">
+            <a href="mailto:perpustakaan@kampus.ac.id">perpustakaan@kampus.ac.id</a>
+            <span class="text-sm" style="color: #94A3B8;">(021) 555-0199 ext 402</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 SIPUS — Dibuat oleh Kelompok: Faisal Akbar, Arya Indra Saputra, Shendy Faiz Saputra, Muhammad Ilham, Muhammad Nazril Padillah, Abdul Havis, Sulton Syarief</div>
+        <div>Modern Academic Library Edition</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/sipus.js"></script>
+</body>
+</html>

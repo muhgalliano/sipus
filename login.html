@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk Sistem - SIPUS Perpustakaan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="public-layout">
+
+  <!-- Header Ringkas -->
+  <header class="public-header">
+    <div class="container">
+      <nav class="navbar" style="justify-content: space-between;">
+        <a href="index.html" class="brand-link">
+          <img src="assets/images/logo.svg" alt="Logo SIPUS" class="brand-logo">
+          <div class="brand-title">
+            <span class="brand-name">SIPUS</span>
+            <span class="brand-subtitle">Sistem Informasi Perpustakaan</span>
+          </div>
+        </a>
+
+        <div class="nav-actions">
+          <a href="index.html" class="btn btn-secondary btn-sm">&larr; Kembali ke Beranda</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <div class="auth-header">
+          <div class="auth-logo">
+            <img src="assets/images/logo.svg" alt="Logo SIPUS" style="width: 52px; height: 52px;">
+          </div>
+          <h2>Masuk ke Akun Anda</h2>
+          <p class="text-sm text-muted">Akses layanan peminjaman anggota dan panel operasional petugas perpustakaan.</p>
+        </div>
+
+        <!-- Form Login Mockup (FR-004) -->
+        <form action="dashboard.html" method="get">
+          <div class="form-group">
+            <label for="username" class="form-label">Email Kampus atau Nomor Anggota / NIP</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="contoh: petugas@kampus.ac.id atau 20241001" value="petugas@kampus.ac.id" required>
+            <span class="form-hint">Gunakan akun SSO kampus atau nomor induk anggota.</span>
+          </div>
+
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <label for="password" class="form-label" style="margin-bottom: 0;">Kata Sandi</label>
+              <a href="#" class="text-xs text-muted" style="text-decoration: underline;">Lupa sandi?</a>
+            </div>
+            <input type="password" id="password" name="password" class="form-control" placeholder="••••••••••••" value="rahasia123" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-check">
+              <input type="checkbox" name="remember" checked>
+              <span class="text-sm">Ingat saya di perangkat ini selama 30 hari</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem 1rem; margin-top: 0.5rem;">
+            Masuk ke Dashboard Petugas
+          </button>
+        </form>
+
+        <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-color); text-align: center;">
+          <p class="text-xs text-muted" style="margin-bottom: 0.75rem;">Simulasi Jalur Prototype:</p>
+          <div style="display: flex; gap: 0.5rem; justify-content: center;">
+            <a href="dashboard.html" class="btn btn-secondary btn-sm">Buka Dashboard Admin &rarr;</a>
+            <a href="profil.html" class="btn btn-secondary btn-sm">Buka Halaman Anggota &rarr;</a>
+          </div>
+        </div>
+
+        <div class="notice-box notice-info" style="margin-top: 1.5rem; margin-bottom: 0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <span class="text-xs">Form ini adalah simulasi mockup visual Front-End sesuai batasan PRD SIPUS Revisi v1.1.</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Publik -->
+  <footer class="public-footer" style="padding: 1.5rem 0;">
+    <div class="container text-center">
+      <div class="text-xs" style="color: #94A3B8;">
+        &copy; 2026 SIPUS — Dibuat oleh Kelompok: Faisal Akbar, Arya Indra Saputra, Shendy Faiz Saputra, Muhammad Ilham, Muhammad Nazril Padillah, Abdul Havis, Sulton Syarief
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/sipus.js"></script>
+</body>
+</html>

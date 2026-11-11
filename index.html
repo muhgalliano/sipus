@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIPUS - Sistem Informasi Perpustakaan Kampus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="public-layout">
+
+  <!-- Header Navigasi Publik -->
+  <header class="public-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-link">
+          <img src="assets/images/logo.svg" alt="Logo SIPUS" class="brand-logo">
+          <div class="brand-title">
+            <span class="brand-name">SIPUS</span>
+            <span class="brand-subtitle">Sistem Informasi Perpustakaan</span>
+          </div>
+        </a>
+
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link active">Beranda</a>
+          <a href="katalog.html" class="nav-link">Katalog Buku</a>
+          <a href="profil.html" class="nav-link">Profil Anggota</a>
+          <a href="dashboard.html" class="nav-link">Panel Admin</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-secondary btn-sm">Masuk Sistem</a>
+          <a href="katalog.html" class="btn btn-primary btn-sm">Cari Koleksi</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="badge badge-info" style="margin-bottom: 1rem;">
+              <span class="status-dot status-dot-success"></span>
+              Layanan Terbuka untuk Seluruh Sivitas Akademika
+            </div>
+            <h1>Pusat Referensi & Pengetahuan Akademik Teknik Informatika</h1>
+            <p>
+              Temukan ribuan koleksi literatur ilmiah, buku teks pemrograman, referensi rekayasa perangkat lunak, dan arsip penelitian terstruktur melalui SIPUS.
+            </p>
+
+            <!-- Mockup Pencarian -->
+            <form action="katalog.html" method="get" class="hero-search-box">
+              <input type="text" class="hero-search-input" name="q" placeholder="Cari judul buku, topik riset, atau nama penulis...">
+              <button type="submit" class="btn btn-primary">Cari di Katalog</button>
+            </form>
+
+            <div class="text-sm text-muted">
+              Pencarian populer: 
+              <a href="katalog.html" class="text-muted" style="text-decoration: underline;">Struktur Data</a>, 
+              <a href="katalog.html" class="text-muted" style="text-decoration: underline;">Basis Data</a>, 
+              <a href="katalog.html" class="text-muted" style="text-decoration: underline;">Kecerdasan Buatan</a>
+            </div>
+          </div>
+
+          <div class="hero-illustration">
+            <img src="assets/images/hero-library.svg" alt="Ilustrasi Perpustakaan Digital SIPUS">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ringkasan Statistik Beranda -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-info">
+              <span class="stat-label">Total Judul Buku</span>
+              <span class="stat-value">1,480</span>
+              <span class="stat-desc">Koleksi fisik & referensi digital</span>
+            </div>
+            <div class="stat-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <span class="stat-label">Anggota Terdaftar</span>
+              <span class="stat-value">3,240</span>
+              <span class="stat-desc">Mahasiswa, dosen & staf</span>
+            </div>
+            <div class="stat-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <span class="stat-label">Buku Sedang Dipinjam</span>
+              <span class="stat-value">428</span>
+              <span class="stat-desc">Sirkulasi aktif bulan berjalan</span>
+            </div>
+            <div class="stat-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <span class="stat-label">Ketersediaan Koleksi</span>
+              <span class="stat-value">94.2%</span>
+              <span class="stat-desc">Stok siap dipinjam di tempat</span>
+            </div>
+            <div class="stat-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bagian Buku Populer -->
+    <section class="section" style="background-color: var(--surface-white); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title">
+            <h2>Koleksi Buku Terpopuler</h2>
+            <p>Buku acuan kurikulum yang paling banyak dipinjam mahasiswa semester ini.</p>
+          </div>
+          <a href="katalog.html" class="btn btn-secondary btn-sm">Lihat Semua Koleksi &rarr;</a>
+        </div>
+
+        <div class="books-grid">
+          <!-- Card Buku 1 -->
+          <article class="book-card">
+            <div class="book-cover-wrap">
+              <img src="assets/images/books/buku-1.svg" alt="Sampul Struktur Data & Algoritma Python" class="book-cover">
+              <div class="book-badge-pos">
+                <span class="badge badge-success">Tersedia</span>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="book-category">Pemrograman</span>
+              <h3 class="book-title"><a href="detail-buku.html">Struktur Data & Algoritma Python</a></h3>
+              <p class="book-author">Dr. Eng. Rinaldi Munir</p>
+              <div class="book-meta">
+                <span>Tahun: 2023</span>
+                <span>Stok: 5 Eks</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card Buku 2 -->
+          <article class="book-card">
+            <div class="book-cover-wrap">
+              <img src="assets/images/books/buku-2.svg" alt="Sampul Rekayasa Perangkat Lunak Terstruktur" class="book-cover">
+              <div class="book-badge-pos">
+                <span class="badge badge-success">Tersedia</span>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="book-category">Software Engineering</span>
+              <h3 class="book-title"><a href="detail-buku.html">Rekayasa Perangkat Lunak Terstruktur</a></h3>
+              <p class="book-author">Rosa A.S. & M. Shalahuddin</p>
+              <div class="book-meta">
+                <span>Tahun: 2022</span>
+                <span>Stok: 3 Eks</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card Buku 3 -->
+          <article class="book-card">
+            <div class="book-cover-wrap">
+              <img src="assets/images/books/buku-3.svg" alt="Sampul Sistem Basis Data Konsep & Desain" class="book-cover">
+              <div class="book-badge-pos">
+                <span class="badge badge-warning">Stok Terbatas</span>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="book-category">Basis Data</span>
+              <h3 class="book-title"><a href="detail-buku.html">Sistem Basis Data Konsep & Desain</a></h3>
+              <p class="book-author">Ir. Fathansyah</p>
+              <div class="book-meta">
+                <span>Tahun: 2021</span>
+                <span>Stok: 1 Eks</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card Buku 5 -->
+          <article class="book-card">
+            <div class="book-cover-wrap">
+              <img src="assets/images/books/buku-5.svg" alt="Sampul Kecerdasan Buatan Teori & Implementasi" class="book-cover">
+              <div class="book-badge-pos">
+                <span class="badge badge-success">Tersedia</span>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="book-category">Artificial Intelligence</span>
+              <h3 class="book-title"><a href="detail-buku.html">Kecerdasan Buatan Teori & Implementasi</a></h3>
+              <p class="book-author">Suyanto, Ph.D.</p>
+              <div class="book-meta">
+                <span>Tahun: 2024</span>
+                <span>Stok: 2 Eks</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bagian Buku Terbaru -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title">
+            <h2>Koleksi Buku Baru Ditambahkan</h2>
+            <p>Pengadaan literatur mutakhir perpustakaan tahun akademik aktif.</p>
+          </div>
+          <a href="katalog.html" class="btn btn-secondary btn-sm">Lihat Katalog Lengkap &rarr;</a>
+        </div>
+
+        <div class="books-grid">
+          <!-- Card Buku 4 -->
+          <article class="book-card">
+            <div class="book-cover-wrap">
+              <img src="assets/images/books/buku-4.svg" alt="Sampul Jaringan Komputer & Komunikasi Data" class="book-cover">
+              <div class="book-badge-pos">
+                <span class="badge badge-success">Tersedia</span>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="book-category">Jaringan Komputer</span>
+              <h3 class="book-title"><a href="detail-buku.html">Jaringan Komputer & Komunikasi Data</a></h3>
+              <p class="book-author">Iwan Sofana, S.T.</p>
+              <div class="book-meta">
+                <span>Tahun: 2023</span>
+                <span>Stok: 4 Eks</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card Buku 6 -->
+          <article class="book-card">
+            <div class="book-cover-wrap">
+              <img src="assets/images/books/buku-6.svg" alt="Sampul Metodologi Riset Ilmu Komputer" class="book-cover">
+              <div class="book-badge-pos">
+                <span class="badge badge-success">Tersedia</span>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="book-category">Metodologi Riset</span>
+              <h3 class="book-title"><a href="detail-buku.html">Metodologi Riset Ilmu Komputer</a></h3>
+              <p class="book-author">Prof. Dr. Zainal Hasibuan</p>
+              <div class="book-meta">
+                <span>Tahun: 2020</span>
+                <span>Stok: 6 Eks</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card Buku 7 -->
+          <article class="book-card">
+            <div class="book-cover-wrap">
+              <img src="assets/images/books/buku-7.svg" alt="Sampul Clean Code Panduan Praktisi" class="book-cover">
+              <div class="book-badge-pos">
+                <span class="badge badge-success">Tersedia</span>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="book-category">Best Practice</span>
+              <h3 class="book-title"><a href="detail-buku.html">Clean Code Panduan Praktisi</a></h3>
+              <p class="book-author">Robert C. Martin</p>
+              <div class="book-meta">
+                <span>Tahun: 2019</span>
+                <span>Stok: 2 Eks</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card Buku 8 -->
+          <article class="book-card">
+            <div class="book-cover-wrap">
+              <img src="assets/images/books/buku-8.svg" alt="Sampul Desain Interaksi dan Pengalaman UX" class="book-cover">
+              <div class="book-badge-pos">
+                <span class="badge badge-success">Tersedia</span>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="book-category">UI / UX Design</span>
+              <h3 class="book-title"><a href="detail-buku.html">Desain Interaksi dan Pengalaman UX</a></h3>
+              <p class="book-author">Adi Nugroho, M.Kom.</p>
+              <div class="book-meta">
+                <span>Tahun: 2023</span>
+                <span>Stok: 4 Eks</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Informasi Perpustakaan -->
+    <section class="section" style="background-color: var(--surface-white); border-top: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-title text-center" style="max-width: 680px; margin: 0 auto 2.5rem auto;">
+          <h2>Layanan & Fasilitas Perpustakaan</h2>
+          <p>Mendukung kegiatan riset, tugas akhir, dan pembelajaran praktikum bagi sivitas akademika.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <h3>Peminjaman Cepat & Terstruktur</h3>
+            <p class="text-sm text-muted">Prosedur peminjaman buku acuan mata kuliah dengan masa pinjam 7 hingga 14 hari bagi mahasiswa aktif.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>Jam Layanan Kampus</h3>
+            <p class="text-sm text-muted">Senin – Jumat pukul 08.00 – 16.30 WIB. Layanan sirkulasi tutup 30 menit sebelum jam operasional berakhir.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3>Ruang Diskusi & Repositori</h3>
+            <p class="text-sm text-muted">Akses ke repositori skripsi, tugas akhir terdahulu, dan meja baca hening berfasilitas colokan listrik & Wi-Fi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Publik -->
+  <footer class="public-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>SIPUS Teknik Informatika</h4>
+          <p class="text-sm" style="color: #94A3B8; line-height: 1.6;">
+            Sistem Informasi Perpustakaan berbasis web untuk mempermudah akses katalog koleksi buku ilmiah dan operasional sirkulasi peminjaman akademik.
+          </p>
+          <p class="text-xs" style="color: #64748B; margin-top: 0.75rem;">
+            Gedung Laboratorium Komputer Terpadu Lt. 2<br>
+            Jl. Pendidikan Kampus Terpadu No. 101
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi Halaman</h4>
+          <div class="footer-links">
+            <a href="index.html">Beranda</a>
+            <a href="katalog.html">Katalog Buku</a>
+            <a href="detail-buku.html">Detail Koleksi</a>
+            <a href="profil.html">Profil Anggota</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Portal Staf & Petugas</h4>
+          <div class="footer-links">
+            <a href="login.html">Masuk Sistem (Login)</a>
+            <a href="dashboard.html">Dashboard Admin</a>
+            <a href="buku.html">Kelola Data Buku</a>
+            <a href="laporan.html">Laporan Perpustakaan</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Bantuan & Kontak</h4>
+          <div class="footer-links">
+            <a href="mailto:perpustakaan@kampus.ac.id">perpustakaan@kampus.ac.id</a>
+            <span class="text-sm" style="color: #94A3B8;">(021) 555-0199 ext 402</span>
+            <span class="text-xs" style="color: #64748B;">Senin - Jumat 08.00 - 16.30 WIB</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SIPUS — Dibuat oleh Kelompok: Faisal Akbar, Arya Indra Saputra, Shendy Faiz Saputra, Muhammad Ilham, Muhammad Nazril Padillah, Abdul Havis, Sulton Syarief, Galliano</div>
+        <div>Modern Academic Library Edition</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/sipus.js"></script>
+</body>
+</html>

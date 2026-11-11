@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sirkulasi Peminjaman Buku - SIPUS Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="admin-shell">
+    <!-- Sidebar Admin -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <a href="dashboard.html" class="admin-brand">
+          <img src="assets/images/logo.svg" alt="SIPUS Logo" style="width: 32px; height: 32px;">
+          <div>
+            <div class="brand-name" style="font-size: 1.1rem;">SIPUS ADMIN</div>
+            <div class="brand-subtitle" style="font-size: 0.7rem;">Sistem Perpustakaan</div>
+          </div>
+        </a>
+      </div>
+
+      <nav class="admin-sidebar-nav">
+        <div class="nav-section-title">Menu Utama</div>
+        <a href="dashboard.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          Dashboard
+        </a>
+
+        <div class="nav-section-title">Master Data</div>
+        <a href="buku.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          Kelola Koleksi Buku
+        </a>
+        <a href="anggota.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Data Anggota
+        </a>
+
+        <div class="nav-section-title">Sirkulasi & Layanan</div>
+        <a href="peminjaman.html" class="sidebar-link active">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+          Transaksi Peminjaman
+        </a>
+        <a href="pengembalian.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          Transaksi Pengembalian
+        </a>
+        <a href="laporan.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Laporan Operasional
+        </a>
+
+        <div class="nav-section-title">Navigasi Terkait</div>
+        <a href="profil.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"></circle><path d="M5.5 21a8.5 8.5 0 0 1 13 0"></path></svg>
+          Pratinjau Profil Anggota
+        </a>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <a href="index.html">&larr; Kembali ke Situs Publik</a>
+        <span>SIPUS v1.1 • Arya Indra &amp; Faisal Akbar</span>
+      </div>
+    </aside>
+
+    <!-- Main Panel -->
+    <div class="admin-main">
+      <!-- Topbar -->
+      <header class="admin-topbar">
+        <div class="admin-topbar-title">
+          <h2>Transaksi Peminjaman Koleksi</h2>
+        </div>
+
+        <div class="admin-topbar-actions">
+          <a href="pengembalian.html" class="btn btn-secondary btn-sm">Buka Form Pengembalian &rarr;</a>
+          <div class="user-badge">
+            <div class="user-avatar">FA</div>
+            <div class="user-info">
+              <div class="user-name">Faisal Akbar</div>
+              <div class="user-role">Staf Administrator</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <main class="admin-content">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="page-header-text">
+            <h1>Pencatatan & Sirkulasi Peminjaman</h1>
+            <p>Kelola peminjaman koleksi fisik perpustakaan dan pantau batas waktu jatuh tempo pengembalian.</p>
+          </div>
+          <div>
+            <span class="badge badge-info">Durasi Peminjaman Standar: 7 Hari</span>
+          </div>
+        </div>
+
+        <!-- Form Representasi Visual Peminjaman Baru (FR-008) -->
+        <div class="card" style="margin-bottom: 2rem;">
+          <div class="card-header">
+            <h3 class="card-title">Form Input Transaksi Peminjaman Baru (Simulasi)</h3>
+          </div>
+          <div class="card-body">
+            <form action="peminjaman.html" method="get">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="no_transaksi" class="form-label">Nomor Transaksi</label>
+                  <input type="text" id="no_transaksi" class="form-control" value="TRX-2026-009" readonly style="background-color: #F8FAFC;">
+                </div>
+
+                <div class="form-group">
+                  <label for="id_anggota" class="form-label">Pilih Anggota Perpustakaan</label>
+                  <select id="id_anggota" class="form-control">
+                    <option value="202443501334">202443501334 — Faisal Akbar</option>
+                    <option value="202443501340">202443501340 — Arya Indra Saputra</option>
+                    <option value="202443501352">202443501352 — Shendy Faiz Saputra</option>
+                    <option value="202443501354">202443501354 — Muhammad Ilham</option>
+                    <option value="202443501357">202443501357 — Muhammad Nazril Padillah</option>
+                    <option value="202443501412">202443501412 — Abdul Havis</option>
+                    <option value="202443502249">202443502249 — Sulton Syarief</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="kode_buku" class="form-label">Pilih Koleksi Buku</label>
+                  <select id="kode_buku" class="form-control">
+                    <option value="CS-2023-001">CS-2023-001 — Struktur Data & Algoritma Python</option>
+                    <option value="CS-2022-002">CS-2022-002 — Rekayasa Perangkat Lunak Terstruktur</option>
+                    <option value="CS-2023-004">CS-2023-004 — Jaringan Komputer & Komunikasi Data</option>
+                    <option value="CS-2024-005">CS-2024-005 — Kecerdasan Buatan Teori & Implementasi</option>
+                    <option value="CS-2020-006">CS-2020-006 — Metodologi Riset Ilmu Komputer</option>
+                    <option value="CS-2019-007">CS-2019-007 — Clean Code Panduan Praktisi</option>
+                    <option value="CS-2023-008">CS-2023-008 — Desain Interaksi dan Pengalaman UX</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="tgl_pinjam" class="form-label">Tanggal Peminjaman</label>
+                  <input type="date" id="tgl_pinjam" class="form-control" value="2026-11-04">
+                </div>
+                <div class="form-group">
+                  <label for="tgl_tempo" class="form-label">Tanggal Jatuh Tempo (+7 Hari)</label>
+                  <input type="date" id="tgl_tempo" class="form-control" value="2026-11-11">
+                </div>
+                <div class="form-group" style="display: flex; align-items: flex-end;">
+                  <button type="button" class="btn btn-primary" style="width: 100%;">
+                    Simpan Transaksi Pinjam
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Tabel Transaksi Peminjaman (FR-008) -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Daftar Transaksi Peminjaman Aktif</h3>
+              <p class="text-xs text-muted" style="margin: 0;">Seluruh koleksi buku yang saat ini berada di luar perpustakaan</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <input type="text" class="form-control" placeholder="Cari transaksi..." style="width: 200px; padding: 0.35rem 0.65rem; font-size: 0.85rem;">
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>No. Transaksi</th>
+                  <th>Nama Anggota</th>
+                  <th>Judul Buku</th>
+                  <th>Tgl Peminjaman</th>
+                  <th>Tgl Jatuh Tempo</th>
+                  <th>Status Peminjaman</th>
+                  <th class="text-right">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>TRX-2026-001</code></td>
+                  <td>
+                    <div style="font-weight: 600;">Arya Indra Saputra</div>
+                    <div class="text-xs text-muted">NIM: 202443501340</div>
+                  </td>
+                  <td>
+                    <div class="table-book-cell">
+                      <a href="detail-buku.html"><img src="assets/images/books/buku-1.svg" alt="Sampul" class="table-book-thumb" style="width: 36px; height: 50px;"></a>
+                      <div>
+                        <div style="font-weight: 600;"><a href="detail-buku.html">Struktur Data &amp; Algoritma Python</a></div>
+                        <div class="text-xs text-muted">Kode: CS-2023-001</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>01 Nov 2026</td>
+                  <td>08 Nov 2026</td>
+                  <td><span class="badge badge-success">Aktif (Sisa 4 Hari)</span></td>
+                  <td class="text-right">
+                    <a href="pengembalian.html" class="btn btn-secondary btn-sm">Kembalikan</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>TRX-2026-002</code></td>
+                  <td>
+                    <div style="font-weight: 600;">Shendy Faiz Saputra</div>
+                    <div class="text-xs text-muted">NIM: 202443501352</div>
+                  </td>
+                  <td>
+                    <div class="table-book-cell">
+                      <a href="detail-buku.html"><img src="assets/images/books/buku-2.svg" alt="Sampul" class="table-book-thumb" style="width: 36px; height: 50px;"></a>
+                      <div>
+                        <div style="font-weight: 600;"><a href="detail-buku.html">Rekayasa Perangkat Lunak Terstruktur</a></div>
+                        <div class="text-xs text-muted">Kode: CS-2022-002</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>28 Okt 2026</td>
+                  <td>04 Nov 2026</td>
+                  <td><span class="badge badge-warning">Jatuh Tempo Hari Ini</span></td>
+                  <td class="text-right">
+                    <a href="pengembalian.html" class="btn btn-secondary btn-sm">Kembalikan</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>TRX-2026-003</code></td>
+                  <td>
+                    <div style="font-weight: 600;">Muhammad Ilham</div>
+                    <div class="text-xs text-muted">NIM: 202443501354</div>
+                  </td>
+                  <td>
+                    <div class="table-book-cell">
+                      <a href="detail-buku.html"><img src="assets/images/books/buku-5.svg" alt="Sampul" class="table-book-thumb" style="width: 36px; height: 50px;"></a>
+                      <div>
+                        <div style="font-weight: 600;"><a href="detail-buku.html">Kecerdasan Buatan Teori &amp; Implementasi</a></div>
+                        <div class="text-xs text-muted">Kode: CS-2024-005</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>24 Okt 2026</td>
+                  <td>07 Nov 2026</td>
+                  <td><span class="badge badge-success">Aktif (Sisa 3 Hari)</span></td>
+                  <td class="text-right">
+                    <a href="pengembalian.html" class="btn btn-secondary btn-sm">Kembalikan</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>TRX-2026-004</code></td>
+                  <td>
+                    <div style="font-weight: 600;">Muhammad Nazril Padillah</div>
+                    <div class="text-xs text-muted">NIM: 202443501357</div>
+                  </td>
+                  <td>
+                    <div class="table-book-cell">
+                      <a href="detail-buku.html"><img src="assets/images/books/buku-3.svg" alt="Sampul" class="table-book-thumb" style="width: 36px; height: 50px;"></a>
+                      <div>
+                        <div style="font-weight: 600;"><a href="detail-buku.html">Sistem Basis Data Konsep &amp; Desain</a></div>
+                        <div class="text-xs text-muted">Kode: CS-2021-003</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>20 Okt 2026</td>
+                  <td>27 Okt 2026</td>
+                  <td><span class="badge badge-danger">Terlambat (8 Hari)</span></td>
+                  <td class="text-right">
+                    <a href="pengembalian.html" class="btn btn-danger btn-sm">Proses Sanksi</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>TRX-2026-006</code></td>
+                  <td>
+                    <div style="font-weight: 600;">Abdul Havis</div>
+                    <div class="text-xs text-muted">NIM: 202443501412</div>
+                  </td>
+                  <td>
+                    <div class="table-book-cell">
+                      <a href="detail-buku.html"><img src="assets/images/books/buku-8.svg" alt="Sampul" class="table-book-thumb" style="width: 36px; height: 50px;"></a>
+                      <div>
+                        <div style="font-weight: 600;"><a href="detail-buku.html">Desain Interaksi dan Pengalaman UX</a></div>
+                        <div class="text-xs text-muted">Kode: CS-2023-008</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>02 Nov 2026</td>
+                  <td>09 Nov 2026</td>
+                  <td><span class="badge badge-success">Aktif (Sisa 5 Hari)</span></td>
+                  <td class="text-right">
+                    <a href="pengembalian.html" class="btn btn-secondary btn-sm">Kembalikan</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <div class="text-xs text-muted">Menampilkan 5 dari total 428 peminjaman aktif bulan ini</div>
+            <div style="display: flex; gap: 0.25rem;">
+              <span class="btn btn-secondary btn-sm" style="opacity: 0.5;">Sebelumnya</span>
+              <span class="btn btn-primary btn-sm">1</span>
+              <span class="btn btn-secondary btn-sm">2</span>
+              <span class="btn btn-secondary btn-sm">Selanjutnya</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/sipus.js"></script>
+</body>
+</html>

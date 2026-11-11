@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Anggota Perpustakaan - SIPUS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="public-layout">
+
+  <!-- Header Navigasi Publik -->
+  <header class="public-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-link">
+          <img src="assets/images/logo.svg" alt="Logo SIPUS" class="brand-logo">
+          <div class="brand-title">
+            <span class="brand-name">SIPUS</span>
+            <span class="brand-subtitle">Sistem Informasi Perpustakaan</span>
+          </div>
+        </a>
+
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Beranda</a>
+          <a href="katalog.html" class="nav-link">Katalog Buku</a>
+          <a href="profil.html" class="nav-link active">Profil Anggota</a>
+          <a href="dashboard.html" class="nav-link">Panel Admin</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-secondary btn-sm">Keluar (Logout)</a>
+          <a href="katalog.html" class="btn btn-primary btn-sm">Pinjam Buku Baru</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <!-- Breadcrumb Navigasi -->
+      <div style="margin-bottom: 1.5rem;" class="text-sm text-muted">
+        <a href="index.html">Beranda</a> / <span>Area Anggota</span> / <strong>Profil Saya</strong>
+      </div>
+
+      <!-- Layout Profil Anggota (FR-011) -->
+      <div class="profile-grid">
+        <!-- Kolom Kiri: Kartu Identitas Anggota -->
+        <div>
+          <div class="profile-card">
+            <div class="profile-avatar-large">AS</div>
+            <h2 style="font-size: 1.35rem; margin-bottom: 0.25rem;">Arya Indra Saputra</h2>
+            <div class="badge badge-success" style="margin-bottom: 0.75rem;">Status: Anggota Aktif</div>
+            <p class="text-sm text-muted">Mahasiswa S1 Teknik Informatika<br>Fakultas Ilmu Komputer</p>
+
+            <div class="profile-meta-list">
+              <div class="profile-meta-item">
+                <div class="profile-meta-label">Nomor Induk Anggota / NIM</div>
+                <div class="profile-meta-value">202443501340</div>
+              </div>
+
+              <div class="profile-meta-item">
+                <div class="profile-meta-label">Alamat Email Kampus</div>
+                <div class="profile-meta-value">arya.indra@mhs.kampus.ac.id</div>
+              </div>
+
+              <div class="profile-meta-item">
+                <div class="profile-meta-label">Nomor Telepon / WhatsApp</div>
+                <div class="profile-meta-value">0812-3456-7890</div>
+              </div>
+
+              <div class="profile-meta-item">
+                <div class="profile-meta-label">Alamat Domisili</div>
+                <div class="profile-meta-value">Jl. Sukarno Hatta No. 45, Coblong, Bandung</div>
+              </div>
+
+              <div class="profile-meta-item">
+                <div class="profile-meta-label">Terdaftar Sejak</div>
+                <div class="profile-meta-value">12 September 2024</div>
+              </div>
+
+              <div class="profile-meta-item">
+                <div class="profile-meta-label">Masa Berlaku Kartu</div>
+                <div class="profile-meta-value">31 Agustus 2028 (4 Tahun)</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <button type="button" class="btn btn-secondary btn-sm" style="width: 100%;">
+                Ubah Biodata & Kontak
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Buku Sedang Dipinjam & Riwayat Peminjaman -->
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          <!-- Buku yang Sedang Dipinjam (FR-011) -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Koleksi yang Sedang Dipinjam</h3>
+                <p class="text-xs text-muted" style="margin: 0;">Maksimal kuota peminjaman aktif: 3 buku</p>
+              </div>
+              <span class="badge badge-info">1 dari 3 Kuota Terpakai</span>
+            </div>
+
+            <div class="card-body" style="padding: 1.25rem;">
+              <div style="display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
+                <div style="width: 80px; height: 110px; flex-shrink: 0; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-color);">
+                  <img src="assets/images/books/buku-1.svg" alt="Buku Dipinjam" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="flex: 1; min-width: 220px;">
+                  <span class="badge badge-neutral text-xs" style="margin-bottom: 0.35rem;">TRX-2026-001</span>
+                  <h4 style="margin-bottom: 0.25rem;">
+                    <a href="detail-buku.html" style="color: var(--primary-navy);">Struktur Data & Algoritma Python</a>
+                  </h4>
+                  <p class="text-sm text-muted" style="margin-bottom: 0.5rem;">Penulis: Dr. Eng. Rinaldi Munir</p>
+                  
+                  <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;" class="text-xs">
+                    <div>
+                      <span class="text-muted">Tanggal Pinjam:</span>
+                      <strong>01 Nov 2026</strong>
+                    </div>
+                    <div>
+                      <span class="text-muted">Batas Jatuh Tempo:</span>
+                      <strong style="color: var(--warning);">08 Nov 2026 (Sisa 4 Hari)</strong>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-secondary btn-sm">Perpanjang Pinjaman</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Riwayat Peminjaman (FR-011) -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Riwayat Peminjaman Sebelumnya</h3>
+                <p class="text-xs text-muted" style="margin: 0;">Arsip transaksi peminjaman dan pengembalian yang telah selesai</p>
+              </div>
+              <span class="text-xs text-muted">Total 4 Transaksi Lalu</span>
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>No. Transaksi</th>
+                    <th>Judul Buku</th>
+                    <th>Tgl Pinjam</th>
+                    <th>Tgl Kembali</th>
+                    <th>Status</th>
+                    <th>Denda</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>TRX-2026-092</code></td>
+                    <td>
+                      <div class="table-book-cell">
+                        <a href="detail-buku.html"><img src="assets/images/books/buku-7.svg" alt="Sampul" class="table-book-thumb" style="width: 32px; height: 44px;"></a>
+                        <strong><a href="detail-buku.html">Clean Code Panduan Praktisi</a></strong>
+                      </div>
+                    </td>
+                    <td>10 Okt 2026</td>
+                    <td>17 Okt 2026</td>
+                    <td><span class="badge badge-success">Kembali Tepat Waktu</span></td>
+                    <td><span class="text-muted">Rp 0</span></td>
+                  </tr>
+
+                  <tr>
+                    <td><code>TRX-2026-064</code></td>
+                    <td>
+                      <div class="table-book-cell">
+                        <a href="detail-buku.html"><img src="assets/images/books/buku-3.svg" alt="Sampul" class="table-book-thumb" style="width: 32px; height: 44px;"></a>
+                        <strong><a href="detail-buku.html">Sistem Basis Data Konsep &amp; Desain</a></strong>
+                      </div>
+                    </td>
+                    <td>14 Sep 2026</td>
+                    <td>21 Sep 2026</td>
+                    <td><span class="badge badge-success">Kembali Tepat Waktu</span></td>
+                    <td><span class="text-muted">Rp 0</span></td>
+                  </tr>
+
+                  <tr>
+                    <td><code>TRX-2026-031</code></td>
+                    <td>
+                      <div class="table-book-cell">
+                        <a href="detail-buku.html"><img src="assets/images/books/buku-8.svg" alt="Sampul" class="table-book-thumb" style="width: 32px; height: 44px;"></a>
+                        <strong><a href="detail-buku.html">Desain Interaksi dan Pengalaman UX</a></strong>
+                      </div>
+                    </td>
+                    <td>01 Jun 2026</td>
+                    <td>09 Jun 2026</td>
+                    <td><span class="badge badge-warning">Terlambat 1 Hari</span></td>
+                    <td><span style="color: var(--success); font-weight: 600;">Rp 1.000 (Lunas)</span></td>
+                  </tr>
+
+                  <tr>
+                    <td><code>TRX-2026-008</code></td>
+                    <td>
+                      <div class="table-book-cell">
+                        <a href="detail-buku.html"><img src="assets/images/books/buku-4.svg" alt="Sampul" class="table-book-thumb" style="width: 32px; height: 44px;"></a>
+                        <strong><a href="detail-buku.html">Jaringan Komputer &amp; Komunikasi Data</a></strong>
+                      </div>
+                    </td>
+                    <td>05 Mei 2026</td>
+                    <td>12 Mei 2026</td>
+                    <td><span class="badge badge-success">Kembali Tepat Waktu</span></td>
+                    <td><span class="text-muted">Rp 0</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div class="text-xs text-muted">Menampilkan 4 riwayat peminjaman buku semester berjalan</div>
+              <a href="katalog.html" class="btn btn-secondary btn-sm">Cari Buku Baru di Katalog &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Publik -->
+  <footer class="public-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>SIPUS Teknik Informatika</h4>
+          <p class="text-sm" style="color: #94A3B8; line-height: 1.6;">
+            Sistem Informasi Perpustakaan berbasis web untuk mempermudah akses katalog koleksi buku ilmiah dan operasional sirkulasi peminjaman akademik.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi Halaman</h4>
+          <div class="footer-links">
+            <a href="index.html">Beranda</a>
+            <a href="katalog.html">Katalog Buku</a>
+            <a href="detail-buku.html">Detail Koleksi</a>
+            <a href="profil.html">Profil Anggota</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Portal Staf & Petugas</h4>
+          <div class="footer-links">
+            <a href="login.html">Masuk Sistem (Login)</a>
+            <a href="dashboard.html">Dashboard Admin</a>
+            <a href="buku.html">Kelola Data Buku</a>
+            <a href="laporan.html">Laporan Perpustakaan</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Bantuan & Kontak</h4>
+          <div class="footer-links">
+            <a href="mailto:perpustakaan@kampus.ac.id">perpustakaan@kampus.ac.id</a>
+            <span class="text-sm" style="color: #94A3B8;">(021) 555-0199 ext 402</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 SIPUS — Dibuat oleh Kelompok: Faisal Akbar, Arya Indra Saputra, Shendy Faiz Saputra, Muhammad Ilham, Muhammad Nazril Padillah, Abdul Havis, Sulton Syarief</div>
+        <div>Modern Academic Library Edition</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/sipus.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Anggota Perpustakaan - SIPUS Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="admin-shell">
+    <!-- Sidebar Admin -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <a href="dashboard.html" class="admin-brand">
+          <img src="assets/images/logo.svg" alt="SIPUS Logo" style="width: 32px; height: 32px;">
+          <div>
+            <div class="brand-name" style="font-size: 1.1rem;">SIPUS ADMIN</div>
+            <div class="brand-subtitle" style="font-size: 0.7rem;">Sistem Perpustakaan</div>
+          </div>
+        </a>
+      </div>
+
+      <nav class="admin-sidebar-nav">
+        <div class="nav-section-title">Menu Utama</div>
+        <a href="dashboard.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          Dashboard
+        </a>
+
+        <div class="nav-section-title">Master Data</div>
+        <a href="buku.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          Kelola Koleksi Buku
+        </a>
+        <a href="anggota.html" class="sidebar-link active">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Data Anggota
+        </a>
+
+        <div class="nav-section-title">Sirkulasi & Layanan</div>
+        <a href="peminjaman.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+          Transaksi Peminjaman
+        </a>
+        <a href="pengembalian.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          Transaksi Pengembalian
+        </a>
+        <a href="laporan.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Laporan Operasional
+        </a>
+
+        <div class="nav-section-title">Navigasi Terkait</div>
+        <a href="profil.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"></circle><path d="M5.5 21a8.5 8.5 0 0 1 13 0"></path></svg>
+          Pratinjau Profil Anggota
+        </a>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <a href="index.html">&larr; Kembali ke Situs Publik</a>
+        <span>SIPUS v1.1 • Arya Indra &amp; Faisal Akbar</span>
+      </div>
+    </aside>
+
+    <!-- Main Panel -->
+    <div class="admin-main">
+      <!-- Topbar -->
+      <header class="admin-topbar">
+        <div class="admin-topbar-title">
+          <h2>Data Anggota Perpustakaan</h2>
+        </div>
+
+        <div class="admin-topbar-actions">
+          <a href="profil.html" class="btn btn-secondary btn-sm">Lihat Profil Anggota</a>
+          <div class="user-badge">
+            <div class="user-avatar">FA</div>
+            <div class="user-info">
+              <div class="user-name">Faisal Akbar</div>
+              <div class="user-role">Staf Administrator</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <main class="admin-content">
+        <!-- Page Header (FR-007) -->
+        <div class="page-header">
+          <div class="page-header-text">
+            <h1>Manajemen Data Anggota</h1>
+            <p>Pengelolaan keanggotaan mahasiswa, dosen, serta sivitas akademika pemegang kartu perpustakaan.</p>
+          </div>
+          <div>
+            <!-- Tombol Tambah Anggota Mockup -->
+            <button type="button" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+              Tambah Anggota Baru
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter & Search Bar Admin -->
+        <div class="filter-bar">
+          <div class="filter-group">
+            <input type="text" class="form-control" placeholder="Cari nama, NIM/NIP, atau email..." style="width: 280px;">
+            <select class="form-control" style="width: 170px;">
+              <option value="">Semua Status</option>
+              <option value="aktif">Aktif</option>
+              <option value="nonaktif">Nonaktif</option>
+              <option value="terblokir">Kena Sanksi</option>
+            </select>
+            <button type="button" class="btn btn-secondary btn-sm">Filter</button>
+          </div>
+
+          <div class="text-sm text-muted">
+            Total Terdaftar: <strong>3,240 Anggota</strong>
+          </div>
+        </div>
+
+        <!-- Tabel Data Anggota (FR-007) -->
+        <div class="card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>No. Anggota</th>
+                  <th>Nama Lengkap</th>
+                  <th>Email & Kontak</th>
+                  <th>Alamat Domisili</th>
+                  <th>Tgl Daftar</th>
+                  <th>Status</th>
+                  <th class="text-right">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>202443501334</code></td>
+                  <td>
+                    <div style="font-weight: 600; color: var(--primary-navy);">Faisal Akbar</div>
+                    <div class="text-xs text-muted">Mahasiswa S1 Teknik Informatika</div>
+                  </td>
+                  <td>
+                    <div>faisal.akbar@mhs.kampus.ac.id</div>
+                    <div class="text-xs text-muted">0812-1111-2221</div>
+                  </td>
+                  <td>Jakarta</td>
+                  <td>12 Sep 2024</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td class="text-right">
+                    <div class="table-actions" style="justify-content: flex-end;">
+                      <a href="profil.html" class="btn btn-secondary btn-sm">Profil</a>
+                      <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                      <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>202443501340</code></td>
+                  <td>
+                    <div style="font-weight: 600; color: var(--primary-navy);">Arya Indra Saputra</div>
+                    <div class="text-xs text-muted">Mahasiswa S1 Teknik Informatika</div>
+                  </td>
+                  <td>
+                    <div>arya.indra@mhs.kampus.ac.id</div>
+                    <div class="text-xs text-muted">0812-3456-7890</div>
+                  </td>
+                  <td>Jakarta</td>
+                  <td>12 Sep 2024</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td class="text-right">
+                    <div class="table-actions" style="justify-content: flex-end;">
+                      <a href="profil.html" class="btn btn-secondary btn-sm">Profil</a>
+                      <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                      <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>202443501352</code></td>
+                  <td>
+                    <div style="font-weight: 600; color: var(--primary-navy);">Shendy Faiz Saputra</div>
+                    <div class="text-xs text-muted">Mahasiswa S1 Teknik Informatika</div>
+                  </td>
+                  <td>
+                    <div>shendy.faiz@mhs.kampus.ac.id</div>
+                    <div class="text-xs text-muted">0821-9876-5432</div>
+                  </td>
+                  <td>Jakarta</td>
+                  <td>12 Sep 2024</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td class="text-right">
+                    <div class="table-actions" style="justify-content: flex-end;">
+                      <a href="profil.html" class="btn btn-secondary btn-sm">Profil</a>
+                      <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                      <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>202443501354</code></td>
+                  <td>
+                    <div style="font-weight: 600; color: var(--primary-navy);">Muhammad Ilham</div>
+                    <div class="text-xs text-muted">Mahasiswa S1 Teknik Informatika</div>
+                  </td>
+                  <td>
+                    <div>muhammad.ilham@mhs.kampus.ac.id</div>
+                    <div class="text-xs text-muted">0857-1122-3344</div>
+                  </td>
+                  <td>Jakarta</td>
+                  <td>12 Sep 2024</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td class="text-right">
+                    <div class="table-actions" style="justify-content: flex-end;">
+                      <a href="profil.html" class="btn btn-secondary btn-sm">Profil</a>
+                      <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                      <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>202443501357</code></td>
+                  <td>
+                    <div style="font-weight: 600; color: var(--primary-navy);">Muhammad Nazril Padillah</div>
+                    <div class="text-xs text-muted">Mahasiswa S1 Teknik Informatika</div>
+                  </td>
+                  <td>
+                    <div>nazril.padillah@mhs.kampus.ac.id</div>
+                    <div class="text-xs text-muted">0878-5544-3322</div>
+                  </td>
+                  <td>Jakarta</td>
+                  <td>12 Sep 2024</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td class="text-right">
+                    <div class="table-actions" style="justify-content: flex-end;">
+                      <a href="profil.html" class="btn btn-secondary btn-sm">Profil</a>
+                      <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                      <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>202443501412</code></td>
+                  <td>
+                    <div style="font-weight: 600; color: var(--primary-navy);">Abdul Havis</div>
+                    <div class="text-xs text-muted">Mahasiswa S1 Teknik Informatika</div>
+                  </td>
+                  <td>
+                    <div>abdul.havis@mhs.kampus.ac.id</div>
+                    <div class="text-xs text-muted">0813-8877-6655</div>
+                  </td>
+                  <td>Jakarta</td>
+                  <td>12 Sep 2024</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td class="text-right">
+                    <div class="table-actions" style="justify-content: flex-end;">
+                      <a href="profil.html" class="btn btn-secondary btn-sm">Profil</a>
+                      <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                      <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>202443502249</code></td>
+                  <td>
+                    <div style="font-weight: 600; color: var(--primary-navy);">Sulton Syarief</div>
+                    <div class="text-xs text-muted">Mahasiswa S1 Teknik Informatika</div>
+                  </td>
+                  <td>
+                    <div>sulton.syarief@mhs.kampus.ac.id</div>
+                    <div class="text-xs text-muted">0819-2233-4455</div>
+                  </td>
+                  <td>Jakarta</td>
+                  <td>12 Sep 2024</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td class="text-right">
+                    <div class="table-actions" style="justify-content: flex-end;">
+                      <a href="profil.html" class="btn btn-secondary btn-sm">Profil</a>
+                      <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                      <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <div class="text-xs text-muted">Menampilkan 1 - 7 dari 7 anggota terdaftar</div>
+            <div style="display: flex; gap: 0.25rem;">
+              <span class="btn btn-secondary btn-sm" style="opacity: 0.5;">Sebelumnya</span>
+              <span class="btn btn-primary btn-sm">1</span>
+              <span class="btn btn-secondary btn-sm">2</span>
+              <span class="btn btn-secondary btn-sm">3</span>
+              <span class="btn btn-secondary btn-sm">Selanjutnya</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/sipus.js"></script>
+</body>
+</html>

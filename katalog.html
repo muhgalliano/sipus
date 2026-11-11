@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Koleksi Buku - SIPUS Perpustakaan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="public-layout">
+
+  <!-- Header Navigasi Publik -->
+  <header class="public-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-link">
+          <img src="assets/images/logo.svg" alt="Logo SIPUS" class="brand-logo">
+          <div class="brand-title">
+            <span class="brand-name">SIPUS</span>
+            <span class="brand-subtitle">Sistem Informasi Perpustakaan</span>
+          </div>
+        </a>
+
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Beranda</a>
+          <a href="katalog.html" class="nav-link active">Katalog Buku</a>
+          <a href="profil.html" class="nav-link">Profil Anggota</a>
+          <a href="dashboard.html" class="nav-link">Panel Admin</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-secondary btn-sm">Masuk Sistem</a>
+          <a href="profil.html" class="btn btn-primary btn-sm">Area Anggota</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <!-- Breadcrumb & Judul Halaman -->
+      <div class="page-header">
+        <div class="page-header-text">
+          <div class="text-xs text-muted" style="margin-bottom: 0.35rem;">
+            <a href="index.html">Beranda</a> / <span>Katalog Buku</span>
+          </div>
+          <h1>Katalog Koleksi Perpustakaan</h1>
+          <p>Jelajahi seluruh daftar buku referensi, modul praktikum, dan literatur akademik Teknik Informatika.</p>
+        </div>
+        <div class="text-sm text-muted">
+          Menampilkan <strong>8 Judul Koleksi Terdaftar</strong>
+        </div>
+      </div>
+
+      <!-- Filter Bar & Search Mockup (FR-002) -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <span class="text-xs font-semibold text-muted" style="text-transform: uppercase;">Kategori:</span>
+          <div class="filter-chips">
+            <a href="katalog.html" class="filter-chip active">Semua (8)</a>
+            <a href="katalog.html" class="filter-chip">Pemrograman</a>
+            <a href="katalog.html" class="filter-chip">Basis Data</a>
+            <a href="katalog.html" class="filter-chip">Jaringan</a>
+            <a href="katalog.html" class="filter-chip">Kecerdasan Buatan</a>
+            <a href="katalog.html" class="filter-chip">Metodologi & Riset</a>
+          </div>
+        </div>
+
+        <div class="filter-group" style="min-width: 280px; flex: 1; justify-content: flex-end;">
+          <input type="text" class="form-control" placeholder="Cari judul, ISBN, atau penulis..." style="max-width: 320px;">
+          <button type="button" class="btn btn-secondary btn-sm">Cari</button>
+        </div>
+      </div>
+
+      <!-- Grid Daftar Buku Lengkap 8 Judul -->
+      <div class="books-grid">
+        <!-- Buku 1 -->
+        <article class="book-card">
+          <div class="book-cover-wrap">
+            <img src="assets/images/books/buku-1.svg" alt="Sampul Struktur Data & Algoritma Python" class="book-cover">
+            <div class="book-badge-pos">
+              <span class="badge badge-success">Tersedia</span>
+            </div>
+          </div>
+          <div class="book-info">
+            <span class="book-category">Pemrograman</span>
+            <h3 class="book-title"><a href="detail-buku.html">Struktur Data & Algoritma Python</a></h3>
+            <p class="book-author">Dr. Eng. Rinaldi Munir</p>
+            <div class="book-meta">
+              <span>Tahun: 2023</span>
+              <span>Stok: 5 Eks</span>
+            </div>
+            <div style="margin-top: 0.85rem;">
+              <a href="detail-buku.html" class="btn btn-secondary btn-sm" style="width: 100%;">Lihat Detail &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Buku 2 -->
+        <article class="book-card">
+          <div class="book-cover-wrap">
+            <img src="assets/images/books/buku-2.svg" alt="Sampul Rekayasa Perangkat Lunak Terstruktur" class="book-cover">
+            <div class="book-badge-pos">
+              <span class="badge badge-success">Tersedia</span>
+            </div>
+          </div>
+          <div class="book-info">
+            <span class="book-category">Software Engineering</span>
+            <h3 class="book-title"><a href="detail-buku.html">Rekayasa Perangkat Lunak Terstruktur</a></h3>
+            <p class="book-author">Rosa A.S. & M. Shalahuddin</p>
+            <div class="book-meta">
+              <span>Tahun: 2022</span>
+              <span>Stok: 3 Eks</span>
+            </div>
+            <div style="margin-top: 0.85rem;">
+              <a href="detail-buku.html" class="btn btn-secondary btn-sm" style="width: 100%;">Lihat Detail &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Buku 3 -->
+        <article class="book-card">
+          <div class="book-cover-wrap">
+            <img src="assets/images/books/buku-3.svg" alt="Sampul Sistem Basis Data Konsep & Desain" class="book-cover">
+            <div class="book-badge-pos">
+              <span class="badge badge-warning">Stok Terbatas</span>
+            </div>
+          </div>
+          <div class="book-info">
+            <span class="book-category">Basis Data</span>
+            <h3 class="book-title"><a href="detail-buku.html">Sistem Basis Data Konsep & Desain</a></h3>
+            <p class="book-author">Ir. Fathansyah</p>
+            <div class="book-meta">
+              <span>Tahun: 2021</span>
+              <span>Stok: 1 Eks</span>
+            </div>
+            <div style="margin-top: 0.85rem;">
+              <a href="detail-buku.html" class="btn btn-secondary btn-sm" style="width: 100%;">Lihat Detail &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Buku 4 -->
+        <article class="book-card">
+          <div class="book-cover-wrap">
+            <img src="assets/images/books/buku-4.svg" alt="Sampul Jaringan Komputer & Komunikasi Data" class="book-cover">
+            <div class="book-badge-pos">
+              <span class="badge badge-success">Tersedia</span>
+            </div>
+          </div>
+          <div class="book-info">
+            <span class="book-category">Jaringan Komputer</span>
+            <h3 class="book-title"><a href="detail-buku.html">Jaringan Komputer & Komunikasi Data</a></h3>
+            <p class="book-author">Iwan Sofana, S.T.</p>
+            <div class="book-meta">
+              <span>Tahun: 2023</span>
+              <span>Stok: 4 Eks</span>
+            </div>
+            <div style="margin-top: 0.85rem;">
+              <a href="detail-buku.html" class="btn btn-secondary btn-sm" style="width: 100%;">Lihat Detail &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Buku 5 -->
+        <article class="book-card">
+          <div class="book-cover-wrap">
+            <img src="assets/images/books/buku-5.svg" alt="Sampul Kecerdasan Buatan Teori & Implementasi" class="book-cover">
+            <div class="book-badge-pos">
+              <span class="badge badge-success">Tersedia</span>
+            </div>
+          </div>
+          <div class="book-info">
+            <span class="book-category">Artificial Intelligence</span>
+            <h3 class="book-title"><a href="detail-buku.html">Kecerdasan Buatan Teori & Implementasi</a></h3>
+            <p class="book-author">Suyanto, Ph.D.</p>
+            <div class="book-meta">
+              <span>Tahun: 2024</span>
+              <span>Stok: 2 Eks</span>
+            </div>
+            <div style="margin-top: 0.85rem;">
+              <a href="detail-buku.html" class="btn btn-secondary btn-sm" style="width: 100%;">Lihat Detail &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Buku 6 -->
+        <article class="book-card">
+          <div class="book-cover-wrap">
+            <img src="assets/images/books/buku-6.svg" alt="Sampul Metodologi Riset Ilmu Komputer" class="book-cover">
+            <div class="book-badge-pos">
+              <span class="badge badge-success">Tersedia</span>
+            </div>
+          </div>
+          <div class="book-info">
+            <span class="book-category">Metodologi Riset</span>
+            <h3 class="book-title"><a href="detail-buku.html">Metodologi Riset Ilmu Komputer</a></h3>
+            <p class="book-author">Prof. Dr. Zainal Hasibuan</p>
+            <div class="book-meta">
+              <span>Tahun: 2020</span>
+              <span>Stok: 6 Eks</span>
+            </div>
+            <div style="margin-top: 0.85rem;">
+              <a href="detail-buku.html" class="btn btn-secondary btn-sm" style="width: 100%;">Lihat Detail &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Buku 7 -->
+        <article class="book-card">
+          <div class="book-cover-wrap">
+            <img src="assets/images/books/buku-7.svg" alt="Sampul Clean Code Panduan Praktisi" class="book-cover">
+            <div class="book-badge-pos">
+              <span class="badge badge-success">Tersedia</span>
+            </div>
+          </div>
+          <div class="book-info">
+            <span class="book-category">Best Practice</span>
+            <h3 class="book-title"><a href="detail-buku.html">Clean Code Panduan Praktisi</a></h3>
+            <p class="book-author">Robert C. Martin</p>
+            <div class="book-meta">
+              <span>Tahun: 2019</span>
+              <span>Stok: 2 Eks</span>
+            </div>
+            <div style="margin-top: 0.85rem;">
+              <a href="detail-buku.html" class="btn btn-secondary btn-sm" style="width: 100%;">Lihat Detail &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Buku 8 -->
+        <article class="book-card">
+          <div class="book-cover-wrap">
+            <img src="assets/images/books/buku-8.svg" alt="Sampul Desain Interaksi dan Pengalaman UX" class="book-cover">
+            <div class="book-badge-pos">
+              <span class="badge badge-success">Tersedia</span>
+            </div>
+          </div>
+          <div class="book-info">
+            <span class="book-category">UI / UX Design</span>
+            <h3 class="book-title"><a href="detail-buku.html">Desain Interaksi dan Pengalaman UX</a></h3>
+            <p class="book-author">Adi Nugroho, M.Kom.</p>
+            <div class="book-meta">
+              <span>Tahun: 2023</span>
+              <span>Stok: 4 Eks</span>
+            </div>
+            <div style="margin-top: 0.85rem;">
+              <a href="detail-buku.html" class="btn btn-secondary btn-sm" style="width: 100%;">Lihat Detail &rarr;</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Pagination Visual Sederhana (Mockup) -->
+      <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 2.5rem;">
+        <span class="btn btn-secondary btn-sm" style="opacity: 0.5; cursor: not-allowed;">&laquo; Sebelumnya</span>
+        <span class="btn btn-primary btn-sm">1</span>
+        <a href="katalog.html" class="btn btn-secondary btn-sm">2</a>
+        <a href="katalog.html" class="btn btn-secondary btn-sm">Selanjutnya &raquo;</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Publik -->
+  <footer class="public-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>SIPUS Teknik Informatika</h4>
+          <p class="text-sm" style="color: #94A3B8; line-height: 1.6;">
+            Sistem Informasi Perpustakaan berbasis web untuk mempermudah akses katalog koleksi buku ilmiah dan operasional sirkulasi peminjaman akademik.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi Halaman</h4>
+          <div class="footer-links">
+            <a href="index.html">Beranda</a>
+            <a href="katalog.html">Katalog Buku</a>
+            <a href="detail-buku.html">Detail Koleksi</a>
+            <a href="profil.html">Profil Anggota</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Portal Staf & Petugas</h4>
+          <div class="footer-links">
+            <a href="login.html">Masuk Sistem (Login)</a>
+            <a href="dashboard.html">Dashboard Admin</a>
+            <a href="buku.html">Kelola Data Buku</a>
+            <a href="laporan.html">Laporan Perpustakaan</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Bantuan & Kontak</h4>
+          <div class="footer-links">
+            <a href="mailto:perpustakaan@kampus.ac.id">perpustakaan@kampus.ac.id</a>
+            <span class="text-sm" style="color: #94A3B8;">(021) 555-0199 ext 402</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 SIPUS — Dibuat oleh Kelompok: Faisal Akbar, Arya Indra Saputra, Shendy Faiz Saputra, Muhammad Ilham, Muhammad Nazril Padillah, Abdul Havis, Sulton Syarief</div>
+        <div>Modern Academic Library Edition</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/sipus.js"></script>
+</body>
+</html>
